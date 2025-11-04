@@ -4,48 +4,6 @@ This plugin checks whether a course contains exactly one visible attendance acti
 
 ---
 
-## 📁Installing via uploaded ZIP file ##
-
-1. Log in to your Moodle site as an admin and go to _Site administration >
-   Plugins > Install plugins_.
-2. Upload the ZIP file with the plugin code. You should only be prompted to add
-   extra details if your plugin type is not automatically detected.
-3. Check the plugin validation report and finish the installation.
-
-## 📁Installing manually ##
-
-The plugin can be also installed by putting the contents of this directory to
-
-    {your/moodle/dirroot}/local/course_checker
-
-Afterwards, log in to your Moodle site as an admin and go to _Site administration >
-Notifications_ to complete the installation.
-
-Alternatively, you can run
-
-    $ php admin/cli/upgrade.php
-
-to complete the installation from the command line.
-
-## 📦 Installing via GitHub
-
-Clone the plugin into your Moodle instance:
-
-```bash
-cd /path/to/moodle
-git clone https://github.com/ffhs/moodle-local_course_checker.git local/course_checker
-```
-
-Run the upgrade script:
-
-```bash
-php admin/cli/upgrade.php
-```
-
-Or complete the installation via the Moodle web interface: **Site administration > Notifications**
-
----
-
 ## ⚙️ Requirements
 
 - Moodle **4.0 or higher**

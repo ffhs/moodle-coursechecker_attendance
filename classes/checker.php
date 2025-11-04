@@ -40,14 +40,20 @@ use stdClass;
  * {@inheritDoc}
  */
 class checker implements check_plugin_interface, mod_type_interface {
-
     /**
      * @var check The result of the check.
      */
     protected check $check;
 
     /**
-     * {@inheritDoc}
+     * Runs the checker.
+     *
+     * @param stdClass $course
+     * @param check $check
+     * @return void
+     * @throws \coding_exception
+     * @throws \moodle_exception
+     * @throws dml_exception
      */
     public function run(stdClass $course, check $check): void {
         // ToDo: Investigate if we skip activities that are not visible and if we should add uservisible.
@@ -117,12 +123,14 @@ class checker implements check_plugin_interface, mod_type_interface {
      */
     protected function get_attendance_sessions(stdClass $course): array {
         global $DB;
-        return $DB->get_records_sql("SELECT DISTINCT (ats.id), a.course, cm.course
-                FROM {attendance_sessions} ats
-                LEFT JOIN {attendance} a ON ats.attendanceid = a.id
-                LEFT JOIN {course_modules} cm ON ats.attendanceid = cm.instance
-                GROUP BY a.id,cm.course
-                HAVING a.course = ? AND cm.course = ?",
-                [$course->id, $course->id]);
+        return $DB->get_records_sql(
+            "SELECT DISTINCT (ats.id), a.course, cm.course
+            FROM {attendance_sessions} ats
+            LEFT JOIN {attendance} a ON ats.attendanceid = a.id
+            LEFT JOIN {course_modules} cm ON ats.attendanceid = cm.instance
+            GROUP BY a.id,cm.course
+            HAVING a.course = ? AND cm.course = ?",
+            [$course->id, $course->id]
+        );
     }
 }
