@@ -26,6 +26,7 @@
  */
 
 $string['pluginname'] = 'Attendance sessions check';
+$string['pluginname_help'] = 'This plugin checks whether a course contains exactly one visible attendance activity and that it does not contain any preconfigured sessions. It ensures consistent setup of attendance tracking across courses.';
 // String specific for the attendance checker.
 $string['attendance_missingplugin'] = 'Skip this testcase because mod_attendance is not installed';
 $string['attendance_missingattendanceactivity'] = 'Check attendance failed - no attendance activity in this course';

@@ -30,5 +30,5 @@ $plugin->requires = 2024042203;
 $plugin->release = 'v4.4-r1';
 $plugin->maturity = MATURITY_STABLE;
 $plugin->dependencies = [
-        'mod_attendance' => 2024072400,
+    'mod_attendance' => 2024072400,
 ];

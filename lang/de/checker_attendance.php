@@ -26,6 +26,7 @@
  */
 
 $string['pluginname'] = 'Anwesenheitsaktivitäten Überprüfung';
+$string['pluginname_help'] = 'Dieses Plugin prüft alle Kursaktivitäten anhand einer konfigurierbaren Sperrliste auf ungültige oder nicht autorisierte Namen. Es unterstützt die Durchsetzung kursübergreifender Namenskonventionen und gewährleistet Konsistenz durch die Kennzeichnung problematischer Aktivitätstitel.';
 // String specific for the attendance checker.
 $string['attendance_missingplugin'] = 'Check übersprungen, da das Plugin "mod_attendance" nicht installiert ist';
 $string['attendance_missingattendanceactivity'] = 'Anwesenheits-Check fehlgeschlagen - keine Anwesenheitsaktivität in diesem Kurs';
