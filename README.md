@@ -1,4 +1,4 @@
-# 📚 Checker Attendance for Moodle: Subplugin of the Local Course Checker Plugin
+# Checker Attendance: Subplugin of the Local Course Checker Plugin [![Moodle Plugin CI](https://github.com/ffhs/moodle-coursechecker_attendance/actions/workflows/moodle-plugin-ci.yml/badge.svg?branch=main)](https://github.com/ffhs/moodle-coursechecker_attendance/actions/workflows/moodle-plugin-ci.yml)
 
 This plugin checks whether a course contains exactly one visible attendance activity and that it does not contain any preconfigured sessions. It ensures consistent setup of attendance tracking across courses.
 

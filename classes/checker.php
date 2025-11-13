@@ -18,7 +18,7 @@
  * Checking the attendance settings on
  * assignments for a course.
  *
- * @package    checker_attendance
+ * @package    coursechecker_attendance
  * @copyright  2025 Simon Gisler, Fernfachhochschule Schweiz (FFHS) <simon.gisler@ffhs.ch>
  * @copyright  based on work by 2019 Liip SA <elearning@liip.ch>
  * @copyright  based on work by 2019 Christoph Karlen, Fernfachhochschule Schweiz (FFHS) <christoph.karlen@ffhs.ch>
@@ -26,7 +26,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace checker_attendance;
+namespace coursechecker_attendance;
 
 use dml_exception;
 use local_course_checker\mod_type_interface;
@@ -75,7 +75,7 @@ class checker implements check_plugin_interface, mod_type_interface {
         if (empty($attendances)) {
             $message = translation_manager::generate(
                 'attendance_missingattendanceactivity',
-                'checker_attendance'
+                'coursechecker_attendance'
             );
             $this->check->add_failed('', '', $message);
             $this->check->set('status', 'failed');
@@ -85,7 +85,7 @@ class checker implements check_plugin_interface, mod_type_interface {
         if (count($attendances) > 1) {
             $message = translation_manager::generate(
                 'attendance_onlyoneattendenceactivityallowed',
-                'checker_attendance'
+                'coursechecker_attendance'
             );
             $this->check->add_failed('', '', $message);
             $this->check->set('status', 'failed');
@@ -93,13 +93,13 @@ class checker implements check_plugin_interface, mod_type_interface {
         }
         // Link to activity.
         $cm = $attendances[0];
-        $title = resolution_link_helper::get_target($cm, 'checker_attendance');
+        $title = resolution_link_helper::get_target($cm, 'coursechecker_attendance');
         $link = resolution_link_helper::get_link_to_modedit_or_view_page($cm->modname, $cm->id);
         // If there are sessions in the attendance activity.
         if (count($this->get_attendance_sessions($course)) > 0) {
             $message = translation_manager::generate(
                 'attendance_sessionsnotemty',
-                'checker_attendance'
+                'coursechecker_attendance'
             );
             $this->check->add_failed($title, $link, $message);
             $this->check->set('status', 'failed');
@@ -108,7 +108,7 @@ class checker implements check_plugin_interface, mod_type_interface {
         // When there are no problems.
         $message = translation_manager::generate(
             'attendance_success',
-            'checker_attendance'
+            'coursechecker_attendance'
         );
         $this->check->add_successful($title, $link, $message);
     }
