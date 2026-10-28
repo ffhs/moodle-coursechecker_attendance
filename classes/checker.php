@@ -1,5 +1,5 @@
 <?php
-// This file is part of Moodle - http://moodle.org/
+// This file is part of Moodle - https://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -78,7 +78,6 @@ class checker implements check_plugin_interface, mod_type_interface {
                 'coursechecker_attendance'
             );
             $this->check->add_failed('', '', $message);
-            $this->check->set('status', 'failed');
             return;
         }
         // If there is more then one attendance activity.
@@ -88,7 +87,6 @@ class checker implements check_plugin_interface, mod_type_interface {
                 'coursechecker_attendance'
             );
             $this->check->add_failed('', '', $message);
-            $this->check->set('status', 'failed');
             return;
         }
         // Link to activity.
@@ -102,7 +100,6 @@ class checker implements check_plugin_interface, mod_type_interface {
                 'coursechecker_attendance'
             );
             $this->check->add_failed($title, $link, $message);
-            $this->check->set('status', 'failed');
             return;
         }
         // When there are no problems.
