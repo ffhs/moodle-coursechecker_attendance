@@ -1,5 +1,5 @@
 <?php
-// This file is part of Moodle - http://moodle.org/
+// This file is part of Moodle - https://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -25,12 +25,12 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Anwesenheitsaktivitäten Überprüfung';
-$string['pluginname_help'] = 'Dieses Plugin prüft alle Kursaktivitäten anhand einer konfigurierbaren Sperrliste auf ungültige oder nicht autorisierte Namen. Es unterstützt die Durchsetzung kursübergreifender Namenskonventionen und gewährleistet Konsistenz durch die Kennzeichnung problematischer Aktivitätstitel.';
-$string['privacy:metadata'] = 'Das Plugin „Anwesenheitsaktivitäten Überprüfung“ speichert keine personenbezogenen Daten. Die Prüfergebnisse werden im Haupt-Plugin „Course Checker“ gespeichert.';
+$string['pluginname'] = 'Anwesenheitstermine Überprüfung';
+$string['pluginname_help'] = 'Diese Überprüfung stellt sicher, dass ein Kurs genau eine sichtbare und aufrufbare Anwesenheitsaktivität enthält und dass keine Anwesenheitssitzungen eingerichtet sind.';
+$string['privacy:metadata'] = 'Diese Überprüfung speichert keine personenbezogenen Daten. Ihre Ergebnisse werden im Haupt-Plugin „Course Checker“ gespeichert.';
 // String specific for the attendance checker.
 $string['attendance_missingplugin'] = 'Check übersprungen, da das Plugin "mod_attendance" nicht installiert ist';
-$string['attendance_missingattendanceactivity'] = 'Anwesenheits-Check fehlgeschlagen - keine Anwesenheitsaktivität in diesem Kurs';
-$string['attendance_onlyoneattendenceactivityallowed'] = 'Anwesenheits-Check fehlgeschlagen – es ist nur eine Anwesenheitsaktivität erlaubt';
-$string['attendance_sessionsnotemty'] = 'Anwesenheits-Check fehlgeschlagen – es dürfen keine Anwesenheitsaktivitäten vorhanden sein';
+$string['attendance_missingattendanceactivity'] = 'In diesem Kurs wurde keine sichtbare, aufrufbare Anwesenheitsaktivität gefunden.';
+$string['attendance_onlyoneattendenceactivityallowed'] = 'Es ist nur eine sichtbare, aufrufbare Anwesenheitsaktivität erlaubt.';
+$string['attendance_sessionsnotemty'] = 'In diesem Kurs dürfen keine Anwesenheitssitzungen konfiguriert sein.';
 $string['attendance_success'] = 'Die Anwesenheitsaktivität ist korrekt konfiguriert.';

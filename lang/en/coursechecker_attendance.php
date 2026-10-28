@@ -1,5 +1,5 @@
 <?php
-// This file is part of Moodle - http://moodle.org/
+// This file is part of Moodle - https://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -26,11 +26,11 @@
  */
 
 $string['pluginname'] = 'Attendance sessions check';
-$string['pluginname_help'] = 'This plugin checks whether a course contains exactly one visible attendance activity and that it does not contain any preconfigured sessions. It ensures consistent setup of attendance tracking across courses.';
-$string['privacy:metadata'] = 'The attendance sessions check does not store any personal data. The check results are stored in the course checker plugin.';
+$string['pluginname_help'] = 'This check verifies that a course contains exactly one visible and viewable attendance activity and that no attendance sessions are configured.';
+$string['privacy:metadata'] = 'This check does not store any personal data. Its results are stored by the Course Checker plugin.';
 // String specific for the attendance checker.
 $string['attendance_missingplugin'] = 'Skip this testcase because mod_attendance is not installed';
-$string['attendance_missingattendanceactivity'] = 'Check attendance failed - no attendance activity in this course';
-$string['attendance_onlyoneattendenceactivityallowed'] = 'Check attendance failed - only one attendance activity is allowed';
-$string['attendance_sessionsnotemty'] = 'Check attendance failed - it\'s not allowed to have any attendance sessions';
-$string['attendance_success'] = 'The attendance activity is configured correctly';
+$string['attendance_missingattendanceactivity'] = 'No visible, viewable attendance activity was found in this course.';
+$string['attendance_onlyoneattendenceactivityallowed'] = 'Only one visible, viewable attendance activity is allowed.';
+$string['attendance_sessionsnotemty'] = 'Attendance sessions must not be configured in this course.';
+$string['attendance_success'] = 'The attendance activity is configured correctly.';
